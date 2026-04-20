@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<HTML>
+	<head>
+		<title>A Clicker</title>
+		<link rel="stylesheet" href="main.css">
+	</head>
+	
+	<body>
+		<div class="sectionLeft unselectable">
+			<center>
+				<div class="scoreContainer">
+					<span id="score">0</span> A<br>
+					<span id="SPS">0</span> A Per Second
+				</div>
+				<br>
+				<div class="clickerContainer">
+					<img src="images/A.png" height="256px" width="256px" id="clicker">
+				</div>
+			</center>
+			
+			<div class="SectionFooter">
+				<h5></h5>
+			</div>
+		</div>	
+		<div class="sectionMid unselectable">
+			<div class="midUpgradeInfo">
+				<span id="titleUp">hover over</span> <br>
+				<span id="descUp"> an upgrade</span> <br>
+				<span id="upgradeCost"></span>
+			</div>
+			<div class="midStats">
+				A in bank: <span id="scoreI">1</span> <br>
+				Total A: <span id="totalScore">1</span> <br>
+				Total Clicks: <span id="totalClicks">1</span> <br>
+				A per Click: <span id="clickPower">1</span> <br> 
+				Current version: <span id="version">1</span> <br>
+				<br>
+				<br>
+				Changelog: <br>
+				v1.1 (4.19.2026): <br>
+				- added changelog <br>
+				- added Gamma and Delta <br>
+				- made some UI changes <br>
+				- added 3 new upgrades <br>
+				- added stats <br>
+				- moved reset button to stats <br>
+				v1.0 (8.10.2025): <br>
+				- first version <br>
+				- added Alpha and Beta
+			</div>
+			<div class="RstBttn" onclick="ResetGame()">
+					<br>
+					RESET EVERYTHING <br>
+					<br>
+			</div>
+		</div>
+		<div class="sectionRight unselectable">
+			<!--  <button onclick="BuyAlpha()">Alpha [<span id="AlphaCost">30</span>] -- <span id="Alphas">0</span></button>
+			<button onclick="BuyBeta()">Beta [<span id="BetaCost">100</span>] -- <span id="Betas">0</span></button>  -->
+			<div id="UpgradeContainer">
+			
+			</div>
+			<div id="shopContainer">
+				<table class="shopButton" onclick="BuyAlpha()">
+					<td id="image"><img src="images/Alpha.png"></td>
+					<td id="nameAndCost">
+						<p>Alpha</p>
+						<p><span id="AlphaCost">30</span> A</p>
+					</td>
+					<td id="amount"><span id="Alphas">0</span></td>
+				</table>
+				<table class="shopButton" onclick="BuyBeta()">
+					<td id="image"><img src="images/Beta.png"></td>
+					<td id="nameAndCost">
+						<p>Beta</p>
+						<p><span id="BetaCost">100</span> A</p>
+					</td>
+					<td id="amount"><span id="Betas">0</span></td>
+				</table>
+			</div>
+		</div>
+		<script src="main.js"></script>
+	</body>
+</HTML>
